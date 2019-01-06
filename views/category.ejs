@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PortalBerita</title>
+	<link rel="stylesheet" href="themes/portalberita.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="/javascripts/category.js"></script>
+  <style>
+    .ui-listview > li h1, .ui-listview > li p, .ui-listview > li img{
+      white-space: normal;
+    }
+  </style>
+</head>
+<body>
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+      <h1 id="title">PortalBerita</h1>
+      <div data-role="navbar">
+          <ul><li><a id="topHeadlines" onclick="topH()" data-icon="bars">Top Headlines</a></li></ul>
+          <ul id="category">
+              <li><a onclick="business()" id="business" data-icon="shop">Business</a></li>
+              <li><a onclick="entertainment()" id="entertainment" data-icon="eye">Entertainment</a></li>
+              <li><a onclick="health()" id="health" data-icon="heart">Health</a></li>
+          </ul>
+          <ul>
+              <li><a onclick="science()" id="science" data-icon="edit">Science</a></li>
+              <li><a onclick="sports()" id="sports" data-icon="action">Sports</a></li>
+              <li><a onclick="technology()" id="technology" data-icon="video">Technology</a></li>
+          </ul>
+      </div>
+    </div>
+    
+		<div data-role="content" data-theme="a">
+      <ul id="listBerita" data-role="listview" data-inset="true"></ul>
+		</div>
+	</div>
+</body>
+</html>
