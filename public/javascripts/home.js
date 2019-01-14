@@ -31,7 +31,7 @@ function list(data){
         let Tanggall = Tanggal.substring(0, 10) + " " + Tanggal.substring(11, 16);
         let Tanggalll = `<p>${Tanggall}</p>`
         let Img;
-        if(temp.urlToImage.length === 0){
+        if(temp.urlToImage === null){
             Img = `<img width="300" height="250" src="/noimage.jpg"></img>`;
         }else{
             Img = `<img width="300" height="250" src="${temp.urlToImage}"></img>`;
