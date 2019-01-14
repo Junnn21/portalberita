@@ -29,18 +29,18 @@ function technology(){
 function list(data){
     for(let i=0; i<data.length; i++){
         let temp = data[i];
-        let Judul = `<h1>${temp.title}</h1>`;
+        let Judul = `<h1><a data-ajax="false" href="${temp.url}">${temp.title}</a></h1>`;
         let Description = `<p>${temp.description}</h1>`;
         let Tanggal = temp.publishedAt;
         let Tanggall = Tanggal.substring(0, 10) + " " + Tanggal.substring(11, 16);
         let Tanggalll = `<p>${Tanggall}</p>`
         let Img;
         if(temp.urlToImage.length === 0){
-            Img = `<img width="200" height="200" align="left" src="/noimage.jpg"></img>`;
+            Img = `<img width="300" height="250" src="/noimage.jpg"></img>`;
         }else{
-            Img = `<img width="200" height="200" align="left" src="${temp.urlToImage}"></img>`;
+            Img = `<img width="300" height="250" src="${temp.urlToImage}"></img>`;
         }
-        let item=`<li>${Judul}<div>${Img}${Tanggalll}${Description}<br><a data-ajax="false" href="${temp.url}">Go to source link</a></div></li>`
+        let item=`<li>${Judul}<div>${Tanggalll}${Img}${Description}</div></li>`
 
         $('#listBerita').append(item);
     }
